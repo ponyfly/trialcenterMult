@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["ie >=6"]
+      },
+    }],
+    ["stage-2"]
+  ],
+  "plugins": [
+    ["babel-plugin-dynamic-import-webpack", "transform-runtime"]
+  ],
+  "comments": true
+}
