@@ -3,13 +3,13 @@
     ["env", {
       "modules": false,
       "targets": {
-        "browsers": ["ie >=6"]
-      },
+        "browsers": ["> 1%", "last 2 versions", "ie >=9"]
+      }
     }],
     ["stage-2"]
   ],
   "plugins": [
-    ["babel-plugin-dynamic-import-webpack", "transform-runtime"]
+    ["transform-runtime"]
   ],
   "comments": true
 }

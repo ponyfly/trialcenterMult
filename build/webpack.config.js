@@ -2,10 +2,12 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.join(__dirname, '../src/js/main.js'),
+  entry: {
+    app: path.join(__dirname, '../src/js/main.js'),
+  },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: "[name].[hash:8].js",
+    filename: "[name].[chunkhash:8].js",
     publicPath: ""
   },
   devServer: {
@@ -25,7 +27,9 @@ module.exports = {
             cacheDirectory: path.join(__dirname, '../tmp')
           },
         },
-        exclude: [path.join(__dirname, '../node_modules')]
+        exclude: [
+          path.join(__dirname, '../node_modules')
+        ]
       }
     ]
   },
